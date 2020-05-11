@@ -57,9 +57,9 @@ public class EmployeeService {
 //		restTemplate.postForEntity("http://localhost:8080/AddEmployee", emp, Employee[].class);
 //	}	
 	
-	public ResponseEntity<Employee[]> insert(Employee emp){
+	public ResponseEntity<Employee> insert(Employee emp){
 		RestTemplate restTemplate = new RestTemplate();
-		return restTemplate.postForEntity("http://localhost:8080/AddEmployee", emp, Employee[].class);
+		return restTemplate.postForEntity("http://localhost:8080/AddEmployee", emp, Employee.class);
 	}
 	
 
